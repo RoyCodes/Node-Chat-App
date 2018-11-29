@@ -17,15 +17,15 @@ describe('generateMessage', () => {
 describe('generateLocationMessage', () => {
   it('should generate correct location object', () => {
     var from = 'Bob';
-    var latitude = 40.7484;
-    var longitude = 73.9857;
-    var url = 'https://www.google.com/maps?q=40.7484,73.9857';
+    var latitude = 40;
+    var longitude = 73;
+    var url = "https://www.google.com/maps?q=40,73";
 
     var message = generateMessage(from, latitude, longitude);
 
     expect(message.createdAt).toBeTruthy();
-    expect(message.from).toContain(from);
-    expect(message.url).toContain(url);
+    expect(message.from).toEqual(from);
+    expect(message.url).toEqual(url);
 
   });
 });
