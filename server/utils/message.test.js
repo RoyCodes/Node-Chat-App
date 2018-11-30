@@ -25,7 +25,7 @@ describe('generateLocationMessage', () => {
 
     expect(message.createdAt).toBeTruthy();
     expect(message.from).toEqual(from);
-    expect(message.url).toEqual(url);
+    expect(message.url).toMatch(url);
 
   });
 });
